@@ -3,7 +3,7 @@ project(maqao LANGUAGES C DESCRIPTION "dotprod")
 
 set(CMAKE_COLOR_DIAGNOSTICS ON)
 set(CMAKE_C_STANDARD 17)
-set(CMAKE_C_FLAGS "-g")
+set(CMAKE_C_FLAGS "-g -fopenmp")
 
 find_package(MPI REQUIRED)
 

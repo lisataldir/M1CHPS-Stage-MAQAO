@@ -1,7 +1,7 @@
 #include "lu.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <omp.h>
 
 void print(double **a, int n){
     for(int i=0; i<n; ++i){

@@ -1,6 +1,7 @@
 #include "dotprod.h"
 #include <stdlib.h>
 #include <mpi.h>
+#include <omp.h>
 
 void vector_init(double *x, int n){
     srand(0);
@@ -19,7 +20,7 @@ double dotprod(double *x, double *y, int n){
 }
 
 
-double dotprod_parallel(double *x, double *y, int n, int rank, int size){
+double dotprod_parallel_mpi(double *x, double *y, int n, int rank, int size){
 
     double res_loc = 0.0;
     double res_glob;
@@ -33,4 +34,15 @@ double dotprod_parallel(double *x, double *y, int n, int rank, int size){
     MPI_Allreduce(&res_loc, &res_glob, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
 
     return res_glob;
+}
+
+
+double dotprod_parallel_omp(double *x, double *y, int n){
+    double res = 0.0;
+
+    #pragma omp parallel for reduction (+:res)
+    for(int i=0; i<n; ++i){
+        res += x[i]*y[i];
+    }
+    return res;
 }
