@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(maqao LANGUAGES C DESCRIPTION "maqao")
+project(maqao LANGUAGES C DESCRIPTION "lu")
 
 set(CMAKE_COLOR_DIAGNOSTICS ON)
 set(CMAKE_C_STANDARD 17)
