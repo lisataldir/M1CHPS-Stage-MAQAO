@@ -1,6 +1,7 @@
 #include "lu.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <lapacke.h>
 
 int main(int argc, char** argv){
 
@@ -10,17 +11,24 @@ int main(int argc, char** argv){
     }
 
     int n = atoi(argv[1]);
-    double **a = malloc(n*sizeof(double));
-    for(int i=0; i<n; ++i){
-        a[i] = malloc(n*sizeof(double));
-    }
+    double *A = (double*)malloc(n*n*sizeof(double));
+    int *ipiv = (int*)malloc(n*sizeof(int));
+    int info;
 
-    init(a, n);
-    LU(a, n);
-    
-    // print(a, n);
+    /* Décomposition LU avec la fonction v0 */
+    init(A, n);
+    LU_v0(A, n);
 
-    drop(a, n);
+    /* Décomposition LU avec la fonction v0 */
+    init(A, n);
+    LU_v1(A, n);
+
+    /* Décomposition LU avec LAPACKE */
+    init(A, n);
+    info = LAPACKE_dgetrf(LAPACK_ROW_MAJOR, n, n, A, n, ipiv);
+
+    free(A);
+    free(ipiv);
     
     return 0;
 }
