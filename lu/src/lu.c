@@ -68,9 +68,9 @@ void LU_v1(double *A, int n){
             d = -d;
             ipiv[imax] = ipiv[k];
         }
-        for (int i=k+1;i<n;i++) {
+        for (int i=k+1;i<n;++i) {
             tmp=A[i*n + k] /= A[k*n + k]; 
-            for (int j=k+1;j<n;j++){
+            for (int j=k+1;j<n;++j){
                 A[i*n + j] -= tmp*A[k*n + j];
             }
         }
