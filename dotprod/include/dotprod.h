@@ -1,9 +1,12 @@
 #ifndef DOTPROD_H_
 #define DOTPROD_H_
 
-void vector_init(double *x, int n);
-double dotprod(double *x, double *y, int n);
-double dotprod_parallel_mpi(double *x, double *y, int n, int rank, int size);
-double dotprod_parallel_omp(double *x, double *y, int n);
+#define u64 unsigned long long int
+
+void vector_init(double *x, u64 n);
+double dotprod(double *x, double *y, u64 n);
+double dotprod_unroll4(double *x, double *y, u64 n);
+double dotprod_parallel_mpi(double *x, double *y, u64 n, int rank, int size);
+double dotprod_parallel_omp(double *x, double *y, u64 n);
 
 #endif
