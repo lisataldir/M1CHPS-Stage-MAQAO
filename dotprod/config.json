@@ -1,0 +1,11 @@
+{
+  "config":
+    {
+      "envv_OMP_NUM_THREADS": 1,
+      "number_processes": 2,
+      "mpi_command": "mpirun -n <number_processes>",
+      "run_command": "<executable> 20000000 100",
+      "executable": "build/dotprod",
+      "comments": "An simple experiment that uses MPI and OpenMP",
+    },
+}
