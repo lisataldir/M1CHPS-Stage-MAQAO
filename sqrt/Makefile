@@ -11,7 +11,7 @@ mylib/libb.so: mylib/b.c
 
 sqrt: main.c
 	#gcc -o $@ $< -I./mylib -L./mylib -la -lb -lm
-	#LD_LIBRARY_PATH=./mylib ./sqrt
+	#LD_LIBRARY_PATH=./mylib ./sqrt [r]
 
 clean:
 	rm -rf mylib/*.so sqrt
