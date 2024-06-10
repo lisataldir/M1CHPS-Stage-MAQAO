@@ -71,13 +71,18 @@ int main(int argc, char** argv){
     }
 
     if(rank == 0){
-        printf("Temps initialisation : %1.2lf s\n", elapsed[0]/1000000);
-        printf("Résultat séquentiel : %lf en %1.2lf s\n", ref, elapsed[1]/1000000);
-        printf("Résultat séquentiel avec UNROLL 4 : %lf en %1.2lf s\n", res_unroll4, elapsed[2]/1000000);
-        printf("Résultat séquentiel avec UNROLL 4 v2 : %lf en %1.2lf s\n", res_unroll4_v2, elapsed[3]/1000000);
-        printf("Résultat séquentiel avec UNROLL 4 v3 : %lf en %1.2lf s\n", res_unroll4_v3, elapsed[4]/1000000);
-        printf("Résultat parallèle avec mpi: %lf en %1.2lf s\n", res_mpi, elapsed[5]/1000000);
-        printf("Résultat parallèle avec omp: %lf en %1.2lf s\n", res_omp, elapsed[6]/1000000);
+
+        printf("___________________________________\n");
+
+        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "vector_init()", elapsed[0]/1000000);
+        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_unroll4_v3()", elapsed[4]/1000000);
+        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_parallel_omp()", elapsed[6]/1000000);
+        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_unroll4()", elapsed[2]/1000000);
+        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_parallel_mpi()", elapsed[5]/1000000);
+        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_unroll4_v2()", elapsed[3]/1000000);
+        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod()", elapsed[1]/1000000);
+
+        printf("___________________________________\n");
     } 
 
     free(x);
