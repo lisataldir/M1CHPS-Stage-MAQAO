@@ -72,17 +72,22 @@ int main(int argc, char** argv){
 
     if(rank == 0){
 
-        printf("___________________________________\n");
+        printf("\033[1m ________________________________________________\n");
 
-        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "vector_init()", elapsed[0]/1000000);
-        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_unroll4_v3()", elapsed[4]/1000000);
-        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_parallel_omp()", elapsed[6]/1000000);
-        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_unroll4()", elapsed[2]/1000000);
-        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_parallel_mpi()", elapsed[5]/1000000);
-        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod_unroll4_v2()", elapsed[3]/1000000);
-        printf("\033[1m%-25s | \033[104m%.2lf s\033[0m\n", "dotprod()", elapsed[1]/1000000);
+        printf(" \033[1m| \033[1m%-30s | \033[1m%s\033[1m|\n", "Function", "Time (in s)");
 
-        printf("___________________________________\n");
+        printf("\033[1m ________________________________________________\n");
+
+        printf(" \033[1m| \033[1m%-30s | \033[104m%-10.2lf \033[0m \033[1m|\n", "vector_init()", elapsed[0]/1000000);
+        printf(" \033[1m| \033[1m%-30s | \033[104m%-10.2lf \033[0m \033[1m|\n", "dotprod_unroll4_v3()", elapsed[4]/1000000);
+        printf(" \033[1m| \033[1m%-30s | \033[104m%-10.2lf \033[0m \033[1m|\n", "dotprod_parallel_omp()", elapsed[6]/1000000);
+        printf(" \033[1m| \033[1m%-30s | \033[104m%-10.2lf \033[0m \033[1m|\n", "dotprod_unroll4()", elapsed[2]/1000000);
+        printf(" \033[1m| \033[1m%-30s | \033[104m%-10.2lf \033[0m \033[1m|\n", "dotprod_parallel_mpi()", elapsed[5]/1000000);
+        printf(" \033[1m| \033[1m%-30s | \033[104m%-10.2lf \033[0m \033[1m|\n", "dotprod_unroll4_v2()", elapsed[3]/1000000);
+        printf(" \033[1m| \033[1m%-30s | \033[104m%-10.2lf \033[0m \033[1m|\n", "dotprod()", elapsed[1]/1000000);
+
+        printf("\033[1m ________________________________________________\n");
+
     } 
 
     free(x);
