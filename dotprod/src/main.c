@@ -24,7 +24,7 @@ int main(int argc, char** argv){
     posix_memalign((void **)&x, 32, n * sizeof(double));
     posix_memalign((void **)&y, 32, n * sizeof(double)); 
 
-    double ref, res_unroll4, res_mpi, res_omp;
+    double ref, res_unroll4, res_unroll4_v2, res_unroll4_v3, res_mpi, res_omp;
 
     for(u64 i=0; i<r; ++i){
 
@@ -33,6 +33,8 @@ int main(int argc, char** argv){
 
         ref = dotprod(x, y, n);
         res_unroll4 = dotprod_unroll4(x, y, n);
+        res_unroll4_v2 = dotprod_unroll4_v2(x, y, n);
+        res_unroll4_v3 = dotprod_unroll4_v3(x, y, n);
         res_mpi = dotprod_parallel_mpi(x, y, n, rank, size);
         res_omp = dotprod_parallel_omp(x, y, n);
 
@@ -41,9 +43,14 @@ int main(int argc, char** argv){
     if(rank == 0){
         printf("Résultat séquentiel : %lf\n", ref);
         printf("Résultat séquentiel avec UNROLL 4: %lf\n", res_unroll4);
+        printf("Résultat séquentiel avec UNROLL 4 v2: %lf\n", res_unroll4_v2);
+        printf("Résultat séquentiel avec UNROLL 4 v3: %lf\n", res_unroll4_v3);
         printf("Résultat parallèle avec mpi: %lf\n", res_mpi);
         printf("Résultat parallèle avec omp: %lf\n", res_omp);
     } 
+
+    free(x);
+    free(y);
 
     MPI_Finalize();
     

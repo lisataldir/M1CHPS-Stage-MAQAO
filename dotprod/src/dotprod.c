@@ -19,6 +19,7 @@ double dotprod(double *x, double *y, u64 n) {
     for (u64 i = 0; i < n; ++i) {
         res += p_x[i] * p_y[i];
     }
+
     return res;
 }
 
@@ -34,6 +35,40 @@ double dotprod_unroll4(double *x, double *y, u64 n){
     for (u64 i = (n - (n & 3)); i < n; i++)
 	    res +=  x[i]*y[i];
     return res;
+}
+
+
+double dotprod_unroll4_v2(double *x, double *y, u64 n){
+    double res = 0.0;
+    #pragma GCC unroll 4
+    for(u64 i=0; i<n; ++i){
+        res += x[i]*y[i]; 
+    }
+    return res;
+}
+
+
+double dotprod_unroll4_v3(double *x, double *y, u64 n){
+
+    double *res = (double *)malloc(n*sizeof(double));
+    double sum = 0.0;
+
+    for(u64 i=0; i< n - (n & 3); i+=4){
+        res[i] = x[i]*y[i];
+        res[i+1] = x[i+1]*y[i+1];
+        res[i+2] = x[i+2]*y[i+2];
+        res[i+3] = x[i+3]*y[i+3];
+    }
+
+    for (u64 i=(n - (n & 3)); i<n; i++)
+	    res[i] =  x[i]*y[i];
+
+    for(u64 i=0; i<n; ++i)
+        sum += res[i];
+    
+    free(res);
+
+    return sum;
 }
 
 
