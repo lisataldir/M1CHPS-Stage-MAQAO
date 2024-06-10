@@ -29,6 +29,6 @@ The repository is structured as follows:
 
 - `dotprod/`: Contains several implementations of the dot product algorithm.
 - `lu/`: Contains several implementations of the LU decomposition algorithm.
-- `sqrt/`: Contains two dynamic libraries computing the square root of a int number.
+- `sqrt/`: Contains two dynamic libraries computing the square root of an integer number.
 
 Each directory includes the necessary source code files and instructions specific to the algorithm as well as a `config.json` file (except for `sqrt/`), a configuration file for MAQAO.
