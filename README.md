@@ -4,7 +4,7 @@ This repository contains various linear algebra algorithms, including dot produc
 
 ## Prerequisites
 
-Before using this repository, ensure that you have MAQAO installed. You can download it from the [official MAQAO website](https://maqao.org/).
+Before using this repository, ensure that you have MAQAO installed. You can download it from [MAQAO website](https://maqao.org/).
 
 ## Usage
 
