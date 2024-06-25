@@ -8,7 +8,7 @@ Before using this repository, ensure that you have MAQAO installed. You can down
 
 ## Usage
 
-To analyze the performance of the algorithms with MAQAO, follow these steps for each directory (except for `sqrt/`):
+To analyze the performance of the algorithms with MAQAO, follow these steps for each directory (except for `dgemm/`):
 
 1. Run the following command:
     ```sh
@@ -16,7 +16,7 @@ To analyze the performance of the algorithms with MAQAO, follow these steps for 
     ```
 2. Open the link provided by MAQAO in your web browser to view the detailed performance report.  
 
-For `sqrt/` run :  
+For `dgemm/` run :  
 ```bash
 $ make
 $ ./run.sh
@@ -29,6 +29,6 @@ The repository is structured as follows:
 
 - `dotprod/`: Contains several implementations of the dot product algorithm.
 - `lu/`: Contains several implementations of the LU decomposition algorithm.
-- `sqrt/`: Contains two dynamic libraries computing the square root of an integer number.
+- `dgemm/`: Contains two dynamic libraries computing the square root of an integer number.
 
-Each directory includes the necessary source code files and instructions specific to the algorithm as well as a `config.json` file (except for `sqrt/`), a configuration file for MAQAO.
+Each directory includes the necessary source code files and instructions specific to the algorithm as well as a `config.json` file (except for `dgemm/`), a configuration file for MAQAO.
