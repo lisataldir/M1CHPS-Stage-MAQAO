@@ -1,8 +1,12 @@
 {
   "config":
     {
-      "envv_OMP_NUM_THREADS": 1,
+      "envv_OMP_NUM_THREADS": 4,
       "number_processes": 2,
+      "external_libraries":
+        [
+        "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+        ],
       "mpi_command": "mpirun -n <number_processes>",
       "run_command": "<executable> 20000000 100",
       "executable": "build/dotprod",

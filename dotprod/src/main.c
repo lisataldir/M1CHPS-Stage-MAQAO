@@ -36,37 +36,37 @@ int main(int argc, char** argv){
         vector_init(x, n);
         vector_init(y, n);
         t1 = clock();
-        elapsed[0] += (t1-t0);
+        elapsed[0] += (double)(t1-t0);
 
         t0 = clock();
         ref = dotprod(x, y, n);
         t1 = clock();
-        elapsed[1] += (t1-t0);
+        elapsed[1] += (double)(t1-t0);
 
         t0 = clock();
         res_unroll4 = dotprod_unroll4(x, y, n);
         t1 = clock();
-        elapsed[2] += (t1-t0);
+        elapsed[2] += (double)(t1-t0);
 
         t0 = clock();
         res_unroll4_v2 = dotprod_unroll4_v2(x, y, n);
         t1 = clock();
-        elapsed[3] += (t1-t0);
+        elapsed[3] += (double)(t1-t0);
 
         t0 = clock();
         res_unroll4_v3 = dotprod_unroll4_v3(x, y, n);
         t1 = clock();
-        elapsed[4] += (t1-t0);
+        elapsed[4] += (double)(t1-t0);
 
         t0 = clock();
         res_mpi = dotprod_parallel_mpi(x, y, n, rank, size);
         t1 = clock();
-        elapsed[5] += (t1-t0);
+        elapsed[5] += (double)(t1-t0);
 
         t0 = clock();
         res_omp = dotprod_parallel_omp(x, y, n);
         t1 = clock();
-        elapsed[6] += (t1-t0);
+        elapsed[6] += (double)(t1-t0);
 
     }
 

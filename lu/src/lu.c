@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <omp.h>
+#include <time.h>
 
 void print(double *A, int n){
     for(int i=0; i<n; ++i){
@@ -24,12 +25,16 @@ void init(double *A, int n){
 
 
 void LU_v0(double *A, int n){
+
+    int i, j;
+
+    // #pragma omp parallel for private(i,j)
     for(int k=0; k<n-1; ++k){
-        for(int i=k+1; i<n; ++i){
+        for(i=k+1; i<n; ++i){
             A[i*n + k] /= A[k*n + k];
         }
-        for(int i=k+1; i<n; ++i){
-            for(int j=k+1; j<n; ++j){
+        for(i=k+1; i<n; ++i){
+            for(j=k+1; j<n; ++j){
                 A[i*n + j] -= A[i*n + k]*A[k*n + j];
             }
         }

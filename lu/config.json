@@ -1,10 +1,10 @@
 {
-    "config":
-      {
-        "envv_OMP_NUM_THREADS": 4,
-        "run_command": "<executable> 2000",
-        "executable": "build/lu",
-        "comments": "An simple experiment that uses MPI and OpenMP",
-      },
-  }
+  "config":
+    {
+      "envv_OMP_NUM_THREADS": 1,
+      "executable": "build/lu",
+      "run_command": "<executable> 3000",
+      "comments": "An simple experiment that uses MPI and OpenMP",
+    },
+}
   

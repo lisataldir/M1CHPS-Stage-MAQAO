@@ -20,13 +20,13 @@ def color(key):
 	for k in key:
 		if (k[-2] == 'P'):
 			color.append('green')
-			continue;
-		if (k[0] == 'V' and k[-2] != 'P'):
+			continue
+		if (k[-2] == 'S'):
 			color.append('orange')
-			continue;
+			continue
 		else:
 			color.append('gray')
-			continue;
+			continue
 	return color
 	
 

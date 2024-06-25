@@ -3,7 +3,7 @@
 
 #include <unistd.h>
 
-typedef long long unsigned int u64;
+typedef long long int u64;
 
 void vector_init(double *x, u64 n);
 double dotprod(double *x, double *y, u64 n);

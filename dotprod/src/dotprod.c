@@ -77,8 +77,8 @@ double dotprod_parallel_mpi(double *x, double *y, u64 n, int rank, int size){
     double res_loc = 0.0;
     double res_glob;
 
-    int deb = (u64)(rank*n/size);
-    int fin = (u64)(deb + n/size);
+    u64 deb = (u64)(rank*n/size);
+    u64 fin = (u64)(deb + n/size);
 
     for(u64 i=deb; i<fin; ++i){
         res_loc += x[i]*y[i];
