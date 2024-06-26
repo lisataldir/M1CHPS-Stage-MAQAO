@@ -1,0 +1,8 @@
+/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c: 3 - 7
+--------------------------------------------------------------------------------
+
+3: void splat(int *result, int *data, int n){
+4:     for(int i=0; i<n; ++i){
+5:         result[i] = data[2];
+6:     }
+7: }

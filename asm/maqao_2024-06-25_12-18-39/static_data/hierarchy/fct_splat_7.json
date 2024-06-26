@@ -1,0 +1,42 @@
+{
+  "__fct":
+    {
+      "loops":
+        {
+          "_1":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c",
+                    "regions":
+                      [
+                        [
+                        4,
+                        5
+                        ]
+                      ]
+                  }
+                ],
+              "src": "splat.c:4-5"
+            },
+          "_2":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c",
+                    "regions":
+                      [
+                        [
+                        4,
+                        5
+                        ]
+                      ]
+                  }
+                ],
+              "src": "splat.c:4-5"
+            }
+        }
+    }
+}

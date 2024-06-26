@@ -1,0 +1,4 @@
+name;time_p;time_s;cpi_ratio;
+/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_15-01-13/binaries/splat;99.841743469238;25.234998703003;;
+kernel;0.13847674429417;0.034999996423721;;
+/usr/lib/x86_64-linux-gnu/libc.so.6;0.019782392308116;0.0049999989569187;;

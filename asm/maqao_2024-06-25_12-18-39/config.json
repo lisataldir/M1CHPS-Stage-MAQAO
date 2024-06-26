@@ -1,0 +1,9 @@
+{
+    "config":
+      {
+        "run_command": "<executable> 2000000000 40",
+        "executable": "bin/splat",
+        "comments": "Test on some assembly instructions",
+      
+  }
+}

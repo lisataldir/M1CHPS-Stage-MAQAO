@@ -1,0 +1,6 @@
+********************************************************************************
+MAQAO 2.20.3 - bfc89c69b7374f41fdba9d7e1e206b0cf5900829::20240621-165222 || 2024/06/21
+maqao OV -R1 -c=config.json 
+CPY:  [true] ./bin/splat --> /home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_15-01-13/binaries/splat
+CMD:   /home/lisataldir/Téléchargements/MAQAO/bin/maqao lprof _caller=oneview  --xp="/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_15-01-13/tools/lprof_npsu_run_0" --mpi-command=""  --collect-topology   -- /home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_15-01-13/binaries/splat 2000000000 40
+CMD:  /home/lisataldir/Téléchargements/MAQAO/bin/maqao otter  -input=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_15-01-13/OTTER/input_manifest.csv -output=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_15-01-13/OTTER/output_manifest.csv

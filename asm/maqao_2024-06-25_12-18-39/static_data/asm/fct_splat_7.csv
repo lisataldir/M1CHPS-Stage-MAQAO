@@ -1,0 +1,56 @@
+address;source_location;insn;indent
+0x1230;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:3;MOV	%RDI,%RAX;
+0x1233;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:3;MOV	%EDX,%ECX;
+0x1235;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:3;MOV	%RSI,%RDI;
+0x1238;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;TEST	%EDX,%EDX;
+0x123a;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JLE	1277 <splat+0x47>;
+0x123c;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;LEA	-0x1(%RDX),%EDX;
+0x123f;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;CMP	$0x3,%EDX;
+0x1242;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;MOVSXD	%ECX,%RDX;
+0x1245;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JBE	125d <splat+0x2d>;
+0x1247;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;LEA	(%RAX,%RDX,4),%RSI;
+0x124b;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;LEA	0x8(%RDI),%R8;
+0x124f;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;CMP	%RSI,%R8;
+0x1252;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JAE	1280 <splat+0x50>;
+0x1254;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;LEA	0xc(%RDI),%RSI;
+0x1258;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;CMP	%RSI,%RAX;
+0x125b;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JAE	1280 <splat+0x50>;
+0x125d;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;LEA	(%RAX,%RDX,4),%RCX;
+0x1261;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;NOPL	(%RAX);
+0x1268;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOV	0x8(%RDI),%EDX;(1) 
+0x126b;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;ADD	$0x4,%RAX;(1) 
+0x126f;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOV	%EDX,-0x4(%RAX);(1) 
+0x1272;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;CMP	%RAX,%RCX;(1) 
+0x1275;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JNE	1268 <splat+0x38>;(1) 
+0x1277;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;RET;
+0x1278;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;NOPL	(%RAX,%RAX,1);
+0x1280;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;MOV	%ECX,%ESI;
+0x1282;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;MOVD	0x8(%RDI),%XMM1;
+0x1287;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;MOV	%RAX,%RDX;
+0x128a;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;SHR	$0x2,%ESI;
+0x128d;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;SAL	$0x4,%RSI;
+0x1291;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;PSHUFD	$0,%XMM1,%XMM0;
+0x1296;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;ADD	%RAX,%RSI;
+0x1299;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:7;NOPL	(%RAX);
+0x12a0;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOVUPS	%XMM0,(%RDX);(2) 
+0x12a3;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;ADD	$0x10,%RDX;(2) 
+0x12a7;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;CMP	%RSI,%RDX;(2) 
+0x12aa;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JNE	12a0 <splat+0x70>;(2) 
+0x12ac;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;MOV	%ECX,%EDX;
+0x12ae;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;AND	$-0x4,%EDX;
+0x12b1;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;TEST	$0x3,%CL;
+0x12b4;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JE	1277 <splat+0x47>;
+0x12b6;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOV	0x8(%RDI),%R8D;
+0x12ba;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOV	%EDX,%ESI;
+0x12bc;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;LEA	(,%RSI,4),%R9;
+0x12c4;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOV	%R8D,(%RAX,%RSI,4);
+0x12c8;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;LEA	0x1(%RDX),%ESI;
+0x12cb;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;CMP	%ESI,%ECX;
+0x12cd;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JLE	1277 <splat+0x47>;
+0x12cf;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;ADD	$0x2,%EDX;
+0x12d2;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOV	%R8D,0x4(%RAX,%R9,1);
+0x12d7;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;CMP	%EDX,%ECX;
+0x12d9;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;JLE	1277 <splat+0x47>;
+0x12db;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOV	0x8(%RDI),%EDX;
+0x12de;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:5;MOV	%EDX,0x8(%RAX,%R9,1);
+0x12e3;/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c:4;RET;

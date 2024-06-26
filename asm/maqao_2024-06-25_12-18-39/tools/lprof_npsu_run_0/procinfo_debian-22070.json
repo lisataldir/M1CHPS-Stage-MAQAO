@@ -1,0 +1,20 @@
+{
+  "content": {
+    "proc_name"          : "Skylake_4e",
+    "hostname"           : "debian",
+    "architecture_code"  : "2",
+    "uarchitecture_code" : "15",
+    "architecture"       : "x86_64",
+    "uarchitecture"      : "SKYLAKE",
+    "cpui_model_name"    : "Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz",
+    "cpui_cache_size"    : "3072 KB",
+    "cpui_cpu_cores"     : "2",
+    "max_frequency"          : "3000000",
+    "cur_frequency"      : "2900011",
+    "driver_frequency"   : "intel_pstate",
+    "scaling_governor"   : "powersave",
+    "huge_pages"         : "always",
+    "os_version"         : "Linux 6.1.0-21-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.90-1 (2024-05-03)",
+    "is_lstopo"          : true,
+  }
+}

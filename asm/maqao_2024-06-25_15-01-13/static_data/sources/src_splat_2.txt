@@ -1,0 +1,5 @@
+/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/src/splat.c: 4 - 5
+--------------------------------------------------------------------------------
+
+4:     for(int i=0; i<n; ++i){
+5:         result[i] = data[2];

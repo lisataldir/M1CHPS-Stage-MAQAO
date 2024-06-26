@@ -1,0 +1,68 @@
+
+* Info: Selecting the 'perf-low-ppn' engine for node debian
+
+* Info: Process launched (host debian, process 22070)Répétition 1/40 
+Répétition 2/40 
+Répétition 3/40 
+Répétition 4/40 
+Répétition 5/40 
+Répétition 6/40 
+Répétition 7/40 
+Répétition 8/40 
+Répétition 9/40 
+Répétition 10/40 
+Répétition 11/40 
+Répétition 12/40 
+Répétition 13/40 
+Répétition 14/40 
+Répétition 15/40 
+Répétition 16/40 
+Répétition 17/40 
+Répétition 18/40 
+Répétition 19/40 
+Répétition 20/40 
+Répétition 21/40 
+Répétition 22/40 
+Répétition 23/40 
+Répétition 24/40 
+Répétition 25/40 
+Répétition 26/40 
+Répétition 27/40 
+Répétition 28/40 
+Répétition 29/40 
+Répétition 30/40 
+Répétition 31/40 
+Répétition 32/40 
+Répétition 33/40 
+Répétition 34/40 
+Répétition 35/40 
+Répétition 36/40 
+Répétition 37/40 
+Répétition 38/40 
+Répétition 39/40 
+Répétition 40/40 
+
+* Info: Process finished (host debian, process 22070)
+* Info: Callchains info will be incomplete
+* Info: Try to recompile your application with -fno-omit-frame-pointer or to rerun with btm=stack
+* Info: Dumping samples (host debian, process 22070)
+* Info: Dumping source info for callchain nodes (host debian, process 22070)
+* Info: Building/writing metadata (host debian)
+* Info: Finished collect step (host debian, process 22070)
+
+Your experiment path is /home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0
+
+To display your profiling results:
+#####################################################################################################################################################################
+#    LEVEL    |     REPORT     |                                                              COMMAND                                                               #
+#####################################################################################################################################################################
+#  Functions  |  Cluster-wide  |  maqao lprof -df xp=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0      #
+#  Functions  |  Per-node      |  maqao lprof -df -dn xp=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-process   |  maqao lprof -df -dp xp=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-thread    |  maqao lprof -df -dt xp=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0  #
+#  Loops      |  Cluster-wide  |  maqao lprof -dl xp=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0      #
+#  Loops      |  Per-node      |  maqao lprof -dl -dn xp=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-process   |  maqao lprof -dl -dp xp=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-thread    |  maqao lprof -dl -dt xp=/home/lisataldir/Documents/M1CHPS/M1CHPS-Stage-MAQAO/asm/maqao_2024-06-25_12-18-39/tools/lprof_npsu_run_0  #
+#####################################################################################################################################################################
+
