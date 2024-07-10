@@ -1,0 +1,59 @@
+address;source_location;insn;indent
+0x4007b0;/users/m23012/m23012tldr/auto/src/init.c:4;CMP	W1, #0;
+0x4007b4;/users/m23012/m23012tldr/auto/src/init.c:4;B.LE	400888 <init+0xd8>;
+0x4007b8;/users/m23012/m23012tldr/auto/src/init.c:4;SUB	W2, W1, #1;
+0x4007bc;/users/m23012/m23012tldr/auto/src/init.c:4;CMP	W2, #2;
+0x4007c0;/users/m23012/m23012tldr/auto/src/init.c:4;B.LS	40088c <init+0xdc>;
+0x4007c4;/users/m23012/m23012tldr/auto/src/init.c:4;UBFM	W3, W1, #2, #31;
+0x4007c8;/users/m23012/m23012tldr/auto/src/init.c:4;ADD	X4, X0, #32;
+0x4007cc;/users/m23012/m23012tldr/auto/src/init.c:4;SUB	W3, W3, #1;
+0x4007d0;/users/m23012/m23012tldr/auto/src/init.c:4;MOVZ	W5, #32;
+0x4007d4;/users/m23012/m23012tldr/auto/src/init.c:4;MOVI	V4.4S, #4;
+0x4007d8;/users/m23012/m23012tldr/auto/src/init.c:4;ADRP	X2, 4007d8 <init+0x28>;
+0x4007dc;/users/m23012/m23012tldr/auto/src/init.c:5;FMOV	V2.2D, #1.0000000;
+0x4007e0;/users/m23012/m23012tldr/auto/src/init.c:5;UMADDL	X3, W3, W5, X4;
+0x4007e4;/users/m23012/m23012tldr/auto/src/init.c:4;LDR	Q3, [X2, #2416];
+0x4007e8;/users/m23012/m23012tldr/auto/src/init.c:4;ORR	X2, XZR, X0;
+0x4007ec;/users/m23012/m23012tldr/auto/src/init.c:4;HINT	#0;
+0x4007f0;/users/m23012/m23012tldr/auto/src/init.c:4;ORR	V0.16B, V3.16B, V3.16B;(4) 
+0x4007f4;/users/m23012/m23012tldr/auto/src/init.c:4;ADD	V3.4S, V3.4S, V4.4S;(4) 
+0x4007f8;/users/m23012/m23012tldr/auto/src/init.c:5;SSHLL	V1.2D, V0.2S, #32;(4) 
+0x4007fc;/users/m23012/m23012tldr/auto/src/init.c:5;SSHLL2	V0.2D, V0.4S, #32;(4) 
+0x400800;/users/m23012/m23012tldr/auto/src/init.c:5;SCVTF	V1.2D, V1.2D;(4) 
+0x400804;/users/m23012/m23012tldr/auto/src/init.c:5;SCVTF	V0.2D, V0.2D;(4) 
+0x400808;/users/m23012/m23012tldr/auto/src/init.c:5;FADD	V1.2D, V1.2D, V2.2D;(4) 
+0x40080c;/users/m23012/m23012tldr/auto/src/init.c:5;FADD	V0.2D, V0.2D, V2.2D;(4) 
+0x400810;/users/m23012/m23012tldr/auto/src/init.c:5;FDIV	V1.2D, V2.2D, V1.2D;(4) 
+0x400814;/users/m23012/m23012tldr/auto/src/init.c:5;FDIV	V0.2D, V2.2D, V0.2D;(4) 
+0x400818;/users/m23012/m23012tldr/auto/src/init.c:5;STP	Q1, Q0, [X2];(4) 
+0x40081c;/users/m23012/m23012tldr/auto/src/init.c:4;ADD	X2, X2, #32;(4) 
+0x400820;/users/m23012/m23012tldr/auto/src/init.c:4;CMP	X2, X3;(4) 
+0x400824;/users/m23012/m23012tldr/auto/src/init.c:4;B.NE	4007f0 <init+0x40>;(4) 
+0x400828;/users/m23012/m23012tldr/auto/src/init.c:4;AND	W2, W1, #1886;
+0x40082c;/users/m23012/m23012tldr/auto/src/init.c:4;ANDS	XZR, X1, #4160;
+0x400830;/users/m23012/m23012tldr/auto/src/init.c:4;B.EQ	400888 <init+0xd8>;
+0x400834;/users/m23012/m23012tldr/auto/src/init.c:5;SCVTF	D1, W2;(3) 
+0x400838;/users/m23012/m23012tldr/auto/src/init.c:5;FMOV	D0, #1.0000000;(3) 
+0x40083c;/users/m23012/m23012tldr/auto/src/init.c:4;ADD	W3, W2, #1;(3) 
+0x400840;/users/m23012/m23012tldr/auto/src/init.c:5;SBFM	X4, X2, #61, #31;(3) 
+0x400844;/users/m23012/m23012tldr/auto/src/init.c:5;FADD	D1, D1, D0;(3) 
+0x400848;/users/m23012/m23012tldr/auto/src/init.c:5;FDIV	D1, D0, D1;(3) 
+0x40084c;/users/m23012/m23012tldr/auto/src/init.c:5;STR	D1, [X0, X2,SXTW #3];(3) 
+0x400850;/users/m23012/m23012tldr/auto/src/init.c:4;CMP	W1, W3;(3) 
+0x400854;/users/m23012/m23012tldr/auto/src/init.c:4;B.LE	400888 <init+0xd8>;(3) 
+0x400858;/users/m23012/m23012tldr/auto/src/init.c:5;SCVTF	D1, W3;(3) 
+0x40085c;/users/m23012/m23012tldr/auto/src/init.c:5;ADD	X0, X0, X4;(3) 
+0x400860;/users/m23012/m23012tldr/auto/src/init.c:4;ADD	W2, W2, #2;(3) 
+0x400864;/users/m23012/m23012tldr/auto/src/init.c:5;FADD	D1, D1, D0;(3) 
+0x400868;/users/m23012/m23012tldr/auto/src/init.c:5;FDIV	D1, D0, D1;(3) 
+0x40086c;/users/m23012/m23012tldr/auto/src/init.c:5;STR	D1, [X0, #8];(3) 
+0x400870;/users/m23012/m23012tldr/auto/src/init.c:4;CMP	W1, W2;(3) 
+0x400874;/users/m23012/m23012tldr/auto/src/init.c:4;B.LE	400888 <init+0xd8>;(3) 
+0x400878;/users/m23012/m23012tldr/auto/src/init.c:5;SCVTF	D1, W2;(3) 
+0x40087c;/users/m23012/m23012tldr/auto/src/init.c:5;FADD	D1, D1, D0;(3) 
+0x400880;/users/m23012/m23012tldr/auto/src/init.c:5;FDIV	D0, D0, D1;(3) 
+0x400884;/users/m23012/m23012tldr/auto/src/init.c:5;STR	D0, [X0, #16];(3) 
+0x400888;/users/m23012/m23012tldr/auto/src/init.c:7;RET;(3) 
+0x40088c;/users/m23012/m23012tldr/auto/src/init.c:4;MOVZ	W2, #0;(3) 
+0x400890;/users/m23012/m23012tldr/auto/src/init.c:4;B	400834 <init+0x84>;(3) 
+0x400894;:0;HINT	#0;

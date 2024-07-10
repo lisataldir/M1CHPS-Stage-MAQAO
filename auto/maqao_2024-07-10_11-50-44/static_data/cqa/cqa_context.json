@@ -1,0 +1,120 @@
+{
+  "_cqa_uarch_const":
+    {
+      "uop cache capacity": 0,
+      "Is supported by UFS": false,
+      "nb simple decoders": 4,
+      "UQ throughput": 8,
+      "vector-unaligned optimal pattern": "1x128",
+      "ports":
+        [
+          {
+            "name": "BRANCH",
+            "units":
+              [
+              ],
+          },
+          {
+            "name": "ALU-SC-0",
+            "units":
+              {
+                "ALU":
+                  [
+                  ],
+              },
+          },
+          {
+            "name": "ALU-SC-1",
+            "units":
+              {
+                "ALU":
+                  [
+                  ],
+              },
+          },
+          {
+            "name": "ALU-MC",
+            "units":
+              {
+                "ALU":
+                  [
+                  ],
+              },
+          },
+          {
+            "width": 128,
+            "name": "VPU/FP-0",
+            "units":
+              {
+                "VPU":
+                  {
+                    "FMA": true,
+                    "FMUL": true,
+                    "FADD": true,
+                  },
+                "ALU":
+                  [
+                  ],
+                "DIV/SQRT":
+                  [
+                  ],
+              },
+          },
+          {
+            "width": 128,
+            "name": "VPU/FP-1",
+            "units":
+              {
+                "ALU":
+                  [
+                  ],
+                "VPU":
+                  {
+                    "FMA": true,
+                    "FMUL": true,
+                    "FADD": true,
+                  },
+              },
+          },
+          {
+            "width": 128,
+            "name": "LD/STA-0",
+            "units":
+              {
+                "load":
+                  [
+                  ],
+                "store data":
+                  [
+                  ],
+                "store address":
+                  [
+                  ],
+              },
+          },
+          {
+            "width": 128,
+            "name": "LD/STA-1",
+            "units":
+              {
+                "load":
+                  [
+                  ],
+                "store data":
+                  [
+                  ],
+                "store address":
+                  [
+                  ],
+              },
+          },
+        ],
+      "vector size in bytes": 16,
+      "IQ throughput": 8,
+      "INT vector size in bytes": 16,
+      "bytes fetched per cycle": 16,
+      "retire throughput": 8,
+      "nb execution ports": 8,
+      "nb complex decoders": 0,
+    },
+}

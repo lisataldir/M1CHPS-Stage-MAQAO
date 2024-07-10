@@ -1,0 +1,20 @@
+Architecture :                          aarch64
+Boutisme :                              Little Endian
+Processeur(s) :                         80
+Liste de processeur(s) en ligne :       0-79
+Thread(s) par cœur :                    1
+Cœur(s) par socket :                    80
+Socket(s) :                             1
+Nœud(s) NUMA :                          1
+Identifiant constructeur :              ARM
+Modèle :                                1
+Nom de modèle :                         Neoverse-N1
+Révision :                              r3p1
+Vitesse maximale du processeur en MHz : 3000,0000
+Vitesse minimale du processeur en MHz : 1000,0000
+BogoMIPS :                              50.00
+Cache L1d :                             64K
+Cache L1i :                             64K
+Cache L2 :                              1024K
+Nœud NUMA 0 de processeur(s) :          0-79
+Drapaux :                               fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp ssbs

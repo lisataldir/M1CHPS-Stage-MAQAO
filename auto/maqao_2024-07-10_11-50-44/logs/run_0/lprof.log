@@ -1,0 +1,30 @@
+
+* Warning: batch-script is deprecated, use launch-script
+
+* Warning: batch-command is deprecated, use launch-command
+
+* Info: Detected 1 Lprof instances in turpanlogin1: processes-per-node/ppn set accordingly.
+If this is incorrect, rerun with an explicit value for this setting
+[0m
+* Info: Selecting the 'perf-low-ppn' engine for node turpanlogin1
+[0m
+* Info: "ref-cycles" not supported on turpanlogin1: fallback to "cpu-clock"[0m
+* Info: Process launched (host turpanlogin1, process 1958928)[0m
+* Info: Process finished (host turpanlogin1, process 1958928)[0m
+
+Your experiment path is /users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0
+
+To display your profiling results:
+##########################################################################################################################################
+#    LEVEL    |     REPORT     |                                                 COMMAND                                                 #
+##########################################################################################################################################
+#  Functions  |  Cluster-wide  |  maqao lprof -df xp=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0      #
+#  Functions  |  Per-node      |  maqao lprof -df -dn xp=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-process   |  maqao lprof -df -dp xp=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-thread    |  maqao lprof -df -dt xp=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0  #
+#  Loops      |  Cluster-wide  |  maqao lprof -dl xp=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0      #
+#  Loops      |  Per-node      |  maqao lprof -dl -dn xp=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-process   |  maqao lprof -dl -dp xp=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-thread    |  maqao lprof -dl -dt xp=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0  #
+##########################################################################################################################################
+

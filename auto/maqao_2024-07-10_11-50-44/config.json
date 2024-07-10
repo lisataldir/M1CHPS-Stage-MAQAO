@@ -1,0 +1,16 @@
+{
+  "config":
+    {
+      "run_command": "<executable> 2000000 10000",
+      "number_processes": 1,
+      "mpi_command": "mpirun -n <number_processes>",
+      "batch_script": "job.slurm",
+      "executable": "build/init",
+      "batch_command": "bash <batch_script>",
+      "comments": "A simple experiment that runs an application through a script such as bash or SLURM"
+    }
+
+"#": "*** Fields from the command line ***",
+
+  }
+}

@@ -1,0 +1,2 @@
+node;proc_name;architecture_code;uarchitecture_code;architecture;uarchitecture;cpui_model_name;cpui_cache_size;cpui_cpu_cores;max_frequency;cur_frequency;driver_frequency;scaling_governor;huge_pages;os_version;pids;
+turpanlogin1;ARM_NEOVERSE_N1;5;23;aarch64;ARM_NEOVERSE_N1;;;;3000000;3000000;cppc_cpufreq;performance;always;Linux 4.18.0-477.27.1.el8_8.aarch64 #1 SMP Thu Aug 31 11:00:23 EDT 2023;1958928;

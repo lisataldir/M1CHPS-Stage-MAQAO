@@ -1,0 +1,4 @@
+name;
+/usr/lib64/ld-2.28.so;
+[vdso];
+/usr/lib64/libc-2.28.so;

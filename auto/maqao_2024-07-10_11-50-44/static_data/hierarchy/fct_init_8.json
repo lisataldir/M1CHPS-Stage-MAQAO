@@ -1,0 +1,42 @@
+{
+  "__fct":
+    {
+      "loops":
+        {
+          "_3":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/users/m23012/m23012tldr/auto/src/init.c",
+                    "regions":
+                      [
+                        [
+                        4,
+                        7,
+                        ],
+                      ],
+                  },
+                ],
+              "src": "init.c:4-7",
+            },
+          "_4":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/users/m23012/m23012tldr/auto/src/init.c",
+                    "regions":
+                      [
+                        [
+                        4,
+                        5,
+                        ],
+                      ],
+                  },
+                ],
+              "src": "init.c:4-5",
+            },
+        },
+    },
+}

@@ -1,0 +1,2 @@
+module;src_file;score;issue;opts;
+init;init.c;0.75;"-funroll-loops is missing. ";"GNU C17 11.2.0 -mlittle-endian -mabi=lp64 -march=armv8.2-a+crypto+fp16+rcpc+dotprod+ssbs -g -O3 ";

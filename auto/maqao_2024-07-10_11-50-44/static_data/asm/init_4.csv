@@ -1,0 +1,15 @@
+address;source_location;insn;indent
+0x4007f0;/users/m23012/m23012tldr/auto/src/init.c:4;ORR	V0.16B, V3.16B, V3.16B;
+0x4007f4;/users/m23012/m23012tldr/auto/src/init.c:4;ADD	V3.4S, V3.4S, V4.4S;
+0x4007f8;/users/m23012/m23012tldr/auto/src/init.c:5;SSHLL	V1.2D, V0.2S, #32;
+0x4007fc;/users/m23012/m23012tldr/auto/src/init.c:5;SSHLL2	V0.2D, V0.4S, #32;
+0x400800;/users/m23012/m23012tldr/auto/src/init.c:5;SCVTF	V1.2D, V1.2D;
+0x400804;/users/m23012/m23012tldr/auto/src/init.c:5;SCVTF	V0.2D, V0.2D;
+0x400808;/users/m23012/m23012tldr/auto/src/init.c:5;FADD	V1.2D, V1.2D, V2.2D;
+0x40080c;/users/m23012/m23012tldr/auto/src/init.c:5;FADD	V0.2D, V0.2D, V2.2D;
+0x400810;/users/m23012/m23012tldr/auto/src/init.c:5;FDIV	V1.2D, V2.2D, V1.2D;
+0x400814;/users/m23012/m23012tldr/auto/src/init.c:5;FDIV	V0.2D, V2.2D, V0.2D;
+0x400818;/users/m23012/m23012tldr/auto/src/init.c:5;STP	Q1, Q0, [X2];
+0x40081c;/users/m23012/m23012tldr/auto/src/init.c:4;ADD	X2, X2, #32;
+0x400820;/users/m23012/m23012tldr/auto/src/init.c:4;CMP	X2, X3;
+0x400824;/users/m23012/m23012tldr/auto/src/init.c:4;B.NE	4007f0 <init+0x40>;

@@ -1,0 +1,307 @@
+{
+  "_cqa_text_report":
+    {
+      "_objects":
+        {
+          "image_vec_align":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/vec_align.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_1x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_512.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_1x32_128":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_128.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_4x32_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x32_256.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_1x64_128":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_128.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_4x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x32_512.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_8x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/8x32_512.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_1x32_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_256.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_2x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/2x64_512.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_2x64_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/2x64_256.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_1x64_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_256.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_1x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_512.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_4x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x64_512.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_row_maj":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/row_maj.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+          "image_col_maj":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/col_maj.svg",
+              "size":
+                {
+                  "x": 500,
+                },
+            },
+        },
+      "AVG":
+        {
+          "hint":
+            [
+              {
+                "workaround": "Avoid mixing data with different types. In particular, check if the type of constants is the same as array elements.",
+                "details": " - SCVTF: 2 occurrences\n",
+                "title": "Conversion instructions",
+                "txt": "Detected expensive conversion instructions.",
+              },
+              {
+                "title": "Matching between your loop (in the source code) and the binary loop",
+                "txt": "The binary loop is composed of 8 FP arithmetical operations:\n - 4: addition or subtraction\n - 4: divide\nThe binary loop is storing 32 bytes.",
+              },
+              {
+                "title": "Arithmetic intensity",
+                "txt": "Arithmetic intensity is 0.25 FP operations per loaded or stored byte.",
+              },
+            ],
+          "expert":
+            [
+              {
+                "title": "General properties",
+                "txt": "nb instructions    : 14\nloop length        : 56\nnb stack references: 0\n",
+              },
+              {
+                "title": "Front-end",
+                "txt": "DOES NOT FIT IN UOP CACHE\nfront end: 4.00 cycles\n",
+              },
+              {
+                "title": "Back-end",
+                "txt": "       | P0   | P1   | P2   | P3   | P4   | P5   | P6   | P7\n--------------------------------------------------------------\nuops   | 1.00 | 0.67 | 0.67 | 0.67 | 5.50 | 5.50 | 0.50 | 0.50\ncycles | 1.00 | 0.67 | 0.67 | 0.67 | 5.50 | 5.50 | 0.50 | 0.50\n\nExecution ports to units layout:\n - P0: \n - P1: ALU\n - P2: ALU\n - P3: ALU\n - P4 (128 bits): VPU, ALU, DIV/SQRT\n - P5 (128 bits): ALU, VPU\n - P6 (128 bits): load, store data, store address\n - P7 (128 bits): load, store data, store address\n\nCycles executing div or sqrt instructions: 13.99-28.17\nLongest recurrence chain latency (RecMII): 2.00\n",
+              },
+              {
+                "title": "Cycles summary",
+                "txt": "Front-end : 4.00\nData deps.: 2.00\nOverall L1: 13.99-28.17\n",
+              },
+              {
+                "title": "Vectorization ratios",
+                "txt": "INT\nall    : 100%\nload   : NA (no load vectorizable/vectorized instructions)\nstore  : 100%\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: 100%\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 100%\nFP\nall     : 100%\nload    : NA (no load vectorizable/vectorized instructions)\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 100%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: 100%\nother   : NA (no other vectorizable/vectorized instructions)\nINT+FP\nall     : 100%\nload    : NA (no load vectorizable/vectorized instructions)\nstore   : 100%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 100%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: 100%\nother   : 100%\n",
+              },
+              {
+                "title": "Cycles and memory resources usage",
+                "txt": "Assuming all data fit into the L1 cache, each iteration of the binary loop takes 28.17 cycles. At this rate:\n - 3% of peak store performance is reached (1.14 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n",
+              },
+              {
+                "title": "ASM code",
+                "txt": "In the binary file, the address of the loop is: 4007f0\n\nInstruction                | Nb FU | P0 | P1   | P2   | P3   | P4   | P5   | P6   | P7   | Latency | Recip. throughput\n----------------------------------------------------------------------------------------------------------------------\nORR V0.16B, V3.16B, V3.16B | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 2       | 0.50\nADD V3.4S, V3.4S, V4.4S    | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 2       | 0.50\nSSHLL V1.2D, V0.2S, #32    | 1     | 0  | 0    | 0    | 0    | 0    | 1    | 0    | 0    | 2       | 1\nSSHLL2 V0.2D, V0.4S, #32   | 1     | 0  | 0    | 0    | 0    | 0    | 1    | 0    | 0    | 2       | 1\nSCVTF V1.2D, V1.2D         | 1     | 0  | 0    | 0    | 0    | 1    | 0    | 0    | 0    | 3       | 1\nSCVTF V0.2D, V0.2D         | 1     | 0  | 0    | 0    | 0    | 1    | 0    | 0    | 0    | 3       | 1\nFADD V1.2D, V1.2D, V2.2D   | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 2       | 0.50\nFADD V0.2D, V0.2D, V2.2D   | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 2       | 0.50\nFDIV V1.2D, V2.2D, V1.2D   | 1     | 0  | 0    | 0    | 0    | 1    | 0    | 0    | 0    | 7-15    | 6.99-14.08\nFDIV V0.2D, V2.2D, V0.2D   | 1     | 0  | 0    | 0    | 0    | 1    | 0    | 0    | 0    | 7-15    | 6.99-14.08\nSTP Q1, Q0, [X2]           | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0.50 | 0.50 | 3       | 2\nADD X2, X2, #32            | 1     | 0  | 0.33 | 0.33 | 0.33 | 0    | 0    | 0    | 0    | 1       | 0.33\nCMP X2, X3                 | 1     | 0  | 0.33 | 0.33 | 0.33 | 0    | 0    | 0    | 0    | 1       | 0.33\nB.NE 4007f0 <init+0x40>    | 1     | 1  | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 1\n",
+              },
+            ],
+          "header":
+            [
+            "1% of peak computational performance is used (0.28 out of 16.00 FLOP per cycle (GFLOPS @ 1GHz))",
+            ],
+          "brief":
+            [
+            ],
+          "gain":
+            [
+              {
+                "details": "All VPU instructions are used in vector version (process two or more data elements in vector registers).\n",
+                "title": "Vectorization",
+                "txt": "Your loop is vectorized, but using 90% register length (average across all VPU instructions).\n",
+              },
+            ],
+          "potential":
+            [
+            ],
+        },
+      "paths":
+        [
+          {
+            "hint":
+              [
+                {
+                  "workaround": "Avoid mixing data with different types. In particular, check if the type of constants is the same as array elements.",
+                  "details": " - SCVTF: 2 occurrences\n",
+                  "title": "Conversion instructions",
+                  "txt": "Detected expensive conversion instructions.",
+                },
+                {
+                  "title": "Matching between your loop (in the source code) and the binary loop",
+                  "txt": "The binary loop is composed of 8 FP arithmetical operations:\n - 4: addition or subtraction\n - 4: divide\nThe binary loop is storing 32 bytes.",
+                },
+                {
+                  "title": "Arithmetic intensity",
+                  "txt": "Arithmetic intensity is 0.25 FP operations per loaded or stored byte.",
+                },
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 14\nloop length        : 56\nnb stack references: 0\n",
+                },
+                {
+                  "title": "Front-end",
+                  "txt": "DOES NOT FIT IN UOP CACHE\nfront end: 4.00 cycles\n",
+                },
+                {
+                  "title": "Back-end",
+                  "txt": "       | P0   | P1   | P2   | P3   | P4   | P5   | P6   | P7\n--------------------------------------------------------------\nuops   | 1.00 | 0.67 | 0.67 | 0.67 | 5.50 | 5.50 | 0.50 | 0.50\ncycles | 1.00 | 0.67 | 0.67 | 0.67 | 5.50 | 5.50 | 0.50 | 0.50\n\nExecution ports to units layout:\n - P0: \n - P1: ALU\n - P2: ALU\n - P3: ALU\n - P4 (128 bits): VPU, ALU, DIV/SQRT\n - P5 (128 bits): ALU, VPU\n - P6 (128 bits): load, store data, store address\n - P7 (128 bits): load, store data, store address\n\nCycles executing div or sqrt instructions: 13.99-28.17\nLongest recurrence chain latency (RecMII): 2.00\n",
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 4.00\nData deps.: 2.00\nOverall L1: 13.99-28.17\n",
+                },
+                {
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 100%\nload   : NA (no load vectorizable/vectorized instructions)\nstore  : 100%\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: 100%\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 100%\nFP\nall     : 100%\nload    : NA (no load vectorizable/vectorized instructions)\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 100%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: 100%\nother   : NA (no other vectorizable/vectorized instructions)\nINT+FP\nall     : 100%\nload    : NA (no load vectorizable/vectorized instructions)\nstore   : 100%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : 100%\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: 100%\nother   : 100%\n",
+                },
+                {
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each iteration of the binary loop takes 28.17 cycles. At this rate:\n - 3% of peak store performance is reached (1.14 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n",
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the loop is: 4007f0\n\nInstruction                | Nb FU | P0 | P1   | P2   | P3   | P4   | P5   | P6   | P7   | Latency | Recip. throughput\n----------------------------------------------------------------------------------------------------------------------\nORR V0.16B, V3.16B, V3.16B | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 2       | 0.50\nADD V3.4S, V3.4S, V4.4S    | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 2       | 0.50\nSSHLL V1.2D, V0.2S, #32    | 1     | 0  | 0    | 0    | 0    | 0    | 1    | 0    | 0    | 2       | 1\nSSHLL2 V0.2D, V0.4S, #32   | 1     | 0  | 0    | 0    | 0    | 0    | 1    | 0    | 0    | 2       | 1\nSCVTF V1.2D, V1.2D         | 1     | 0  | 0    | 0    | 0    | 1    | 0    | 0    | 0    | 3       | 1\nSCVTF V0.2D, V0.2D         | 1     | 0  | 0    | 0    | 0    | 1    | 0    | 0    | 0    | 3       | 1\nFADD V1.2D, V1.2D, V2.2D   | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 2       | 0.50\nFADD V0.2D, V0.2D, V2.2D   | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 2       | 0.50\nFDIV V1.2D, V2.2D, V1.2D   | 1     | 0  | 0    | 0    | 0    | 1    | 0    | 0    | 0    | 7-15    | 6.99-14.08\nFDIV V0.2D, V2.2D, V0.2D   | 1     | 0  | 0    | 0    | 0    | 1    | 0    | 0    | 0    | 7-15    | 6.99-14.08\nSTP Q1, Q0, [X2]           | 1     | 0  | 0    | 0    | 0    | 0.50 | 0.50 | 0.50 | 0.50 | 3       | 2\nADD X2, X2, #32            | 1     | 0  | 0.33 | 0.33 | 0.33 | 0    | 0    | 0    | 0    | 1       | 0.33\nCMP X2, X3                 | 1     | 0  | 0.33 | 0.33 | 0.33 | 0    | 0    | 0    | 0    | 1       | 0.33\nB.NE 4007f0 <init+0x40>    | 1     | 1  | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 1\n",
+                },
+              ],
+            "header":
+              [
+              "1% of peak computational performance is used (0.28 out of 16.00 FLOP per cycle (GFLOPS @ 1GHz))",
+              ],
+            "brief":
+              [
+              ],
+            "gain":
+              [
+                {
+                  "details": "All VPU instructions are used in vector version (process two or more data elements in vector registers).\n",
+                  "title": "Vectorization",
+                  "txt": "Your loop is vectorized, but using 90% register length (average across all VPU instructions).\n",
+                },
+              ],
+            "potential":
+              [
+              ],
+          },
+        ],
+      "common":
+        {
+          "header":
+            [
+            "The loop is defined in /users/m23012/m23012tldr/auto/src/init.c:4-5.\n",
+            "The related source loop is multi-versionned.",
+            ],
+          "nb_paths": 1,
+        },
+    },
+}

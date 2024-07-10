@@ -1,0 +1,6 @@
+********************************************************************************
+MAQAO 2.20.1 - cf6e61a781c49dfcbeaded3d28e83d3212ea2c5e::20240418-162820 || 2024/04/18
+maqao OV -R1 -c=template_script.json 
+CPY:  [true] ./build/init --> /users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/binaries/init
+CMD:  /users/m23012/m23012tldr/maqao.aarch64.2.20.1/bin/maqao lprof  --xp="/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/tools/lprof_npsu_run_0" --mpi-command="mpirun -n 1"   --batch-command="bash " --batch-script="/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/ref.batch.tmp"  -- /users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/binaries/init 2000000 10000
+CMD:  /users/m23012/m23012tldr/maqao.aarch64.2.20.1/bin/maqao otter  -input=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/OTTER/input_manifest.csv -output=/users/m23012/m23012tldr/auto/maqao_2024-07-10_11-50-44/OTTER/output_manifest.csv
