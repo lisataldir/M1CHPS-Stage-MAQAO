@@ -1,0 +1,11 @@
+{
+    "config":
+      {
+        "run_command": "<executable> 2000000 10000",
+        "number_processes": 1,
+        "envv_OMP_NUM_THREADS": 20,
+        "mpi_command": "mpirun -n <number_processes>",
+        "executable": "build/init",
+        "comments": "A simple experiment that runs an application with OpenMP"
+      }
+  }
